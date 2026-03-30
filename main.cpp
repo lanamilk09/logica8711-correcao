@@ -2,14 +2,22 @@
 #include<string>
 int main(){
 
-    std::string diadasemana;
+   int a; 
+   int b; 
+   //int a, b; 
 
-    std::cout<<"que dia é hoje : "<<std::endl;
-    std::cin>>diadasemana;
+   std::cout<<"digite um valor para a: "<<std::endl;
+   std::cin>>a;
 
-    std::cout<<" Hoje é "<<diadasemana<<"!!"<<std::endl;
+   std::cout<<"digite um valor para b: "<<std::endl;
+   std::cin>>b; 
+
+   std::cout<<(a > b)<<std::endl; 
+   std::cout<<(a >= b )<<std::endl;
+   std::cout<<(a != b)<<std::endl;
 
 
     return 0; 
+
 }
 
