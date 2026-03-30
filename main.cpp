@@ -13,8 +13,14 @@ int main(){
    std::cin>>b; 
 
    std::cout<<(a > b)<<std::endl; 
+   //maior que ...
    std::cout<<(a >= b )<<std::endl;
+   //maior ou igual a...
    std::cout<<(a != b)<<std::endl;
+   //diferente de...
+   std::cout<<(a == b)<<std::endl;
+   //igual a...
+
 
 
     return 0; 
