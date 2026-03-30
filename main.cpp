@@ -2,10 +2,14 @@
 #include<string>
 int main(){
 
+    std::string diadasemana;
 
-    std::string saudacao = "Boa Noite,Lana!";
+    std::cout<<"que dia é hoje : "<<std::endl;
+    std::cin>>diadasemana;
 
-    std::cout<<saudacao<<std::endl;
+    std::cout<<" Hoje é "<<diadasemana<<"!!"<<std::endl;
 
-    return 0;
+
+    return 0; 
 }
+
