@@ -2,12 +2,11 @@
 #include<string>
 int main(){
 
-    int a = 8; 
-    int b = 3; 
-
-    std::cout<<(a % b )<<std::endl;
-    
-
+    int a = 10; 
+   
+   std::cout<<++a<<std::endl;
+   std::cout<<++a<<std::endl;
+   
     return 0; 
 
 }
