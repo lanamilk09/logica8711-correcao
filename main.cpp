@@ -16,7 +16,7 @@ int main(){
  std::cout<<result<<std::endl;
 
  std::cout<<"olá"<<nome<<"!!"<<std::endl;
- std::cout<<"você tem"<<idade<<std::endl;
+ std::cout<<"você tem"<<idade<<"anos"<<std::endl;
  std::cout<<"você nasceu no ano"<<result; 
 
 
