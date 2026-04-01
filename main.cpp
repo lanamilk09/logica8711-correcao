@@ -2,11 +2,13 @@
 #include<string>
 int main(){
 
-    int a = 10; 
-    int b = 6; 
+    bool condicao = true;
+    //usado para saber se é verdadeiro 
 
-   std::cout<<((a > b) || (a + b) >=16)<<std::endl;
-   // || significa ou 
+    bool condicao1 = false; 
+
+    std::cout<<condicao<<std::endl; 
+    std::cout<<condicao1<<std::endl; 
 
 
    
