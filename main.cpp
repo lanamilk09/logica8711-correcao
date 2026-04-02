@@ -1,24 +1,16 @@
 #include<iostream>
-#include<string>
+
 int main(){
 
- std::string nome;
- int idade;
- int anoAtual = 2026;
- int result;
+int result1 = 4 + 4 * 2;
+int result2 = 4 + 2 / 2;
+int result3 = (4 + 4) * 2; 
 
- std::cout<<" Qual seu nome? "<<std::endl; 
- std::cin>>nome;
- std::cout<<" Qual sua idade? "<<std::endl; 
- std::cin>>idade; 
+std::cout<<result1<<std::endl;
+std::cout<<result2<<std::endl;
+std::cout<<result3<<std::endl; 
 
- result = anoAtual - idade; 
- std::cout<<result<<std::endl;
-
- std::cout<<"olá"<<nome<<"!!"<<std::endl;
- std::cout<<"você tem"<<idade<<"anos"<<std::endl;
- std::cout<<"você nasceu no ano"<<result; 
-
+ 
 
     return 0; 
 
