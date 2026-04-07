@@ -3,10 +3,11 @@
 
 int main(){
 
-  int Alana[5] = {10,20,30,40,50}; 
+ std::string nome = "Alana";
 
-  std::cout<<Alana[1]; 
-
+ std::cout<<nome[0]<<std::endl;
+ std::cout<<nome[2]<<std::endl;
+ std::cout<<nome[nome.length() - 1]<<std::endl;
 
     return 0;
 }
