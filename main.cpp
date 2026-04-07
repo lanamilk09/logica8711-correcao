@@ -3,17 +3,11 @@
 
 int main(){
 
-    int a = 40;
-    std::string b = "10";
+   std::string nome = "Alana";
 
-    std::string nome = "Alana ";
-    std::string sobrenome = "Milk";
+   std::cout<<"nome tem: "<<nome.length()<<" letras."<<std::endl;
+   std::cout<<"nome tem: "<<nome.size()<<" letras."<<std::endl;
 
-    std::string nomeCompleto = nome + sobrenome;
-
-    std::cout<<nomeCompleto;
-
-    // std::cout<<a + b<<std::endl;
 
 
     return 0;
