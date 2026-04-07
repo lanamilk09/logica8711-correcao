@@ -1,17 +1,20 @@
 #include<iostream>
-#include<string> 
+#include<string>
+
 int main(){
 
- int a = 40; 
- int b = 10; 
- std::string c = "40";
- std::string d = "10"; 
+    int a = 40;
+    std::string b = "10";
 
- std::cout<<a+b<<std::endl;
- std::cout<<c+d<<std::endl;
- 
+    std::string nome = "Alana ";
+    std::string sobrenome = "Milk";
 
-    return 0; 
+    std::string nomeCompleto = nome + sobrenome;
 
+    std::cout<<nomeCompleto;
+
+    // std::cout<<a + b<<std::endl;
+
+
+    return 0;
 }
-
