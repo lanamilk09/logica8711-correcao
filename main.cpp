@@ -3,12 +3,24 @@
 
 int main(){
 
-std::cout<<std::sqrt(64)<<std::endl;
-// raiz quadrada 
-std::cout<<std::round(2.6)<<std::endl;
-//arredonda 
-std::cout<<std::log(2)<<std::endl;
-//da um numero quadrado 
+int a = 5; 
+int b = 2; 
+
+if(a > 2){ 
+
+    std::cout<< " A é maior que B. "<<std::endl; 
+
+}else{
+
+    std::cout<<"B é maior que A."<<std::endl;
+
+
+}
+// if(teste){
+    //condiçao verdadeira 
+    //}else{
+//condiçao falsa 
+//}
 
 
     return 0;
