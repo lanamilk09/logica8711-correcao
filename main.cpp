@@ -4,12 +4,12 @@
 
 int main(){
 
-std::string nomes[3] = { "Joao", "Paula", "Murilo"};
-int idades[3] = {27, 31, 20};
+int numeros[5] = {10, 20, 30, 40, 50};
+int tamanho = std::size(numeros);
+for(int i = 0; i < tamanho; i++){
+std::cout<<numeros[i]<<std::endl;
 
-std::cout<<nomes[1]<<" tem "<<idades[1]<<" anos! "<<std::endl;
-std::cout<<nomes[2]<<" possui "<<idades[2]<<" anos! "<<std::endl;
-std::cout<<nomes[0]<<" disse que tem "<<idades[0]<<" anos de idade! "<<std::endl;
+}
 
 
     return 0;
