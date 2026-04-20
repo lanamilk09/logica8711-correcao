@@ -1,18 +1,15 @@
 #include <iostream>
-#include<chrono>
-#include<thread> 
+#include<string>
+
 
 int main(){
 
- int inicio = 5;
+std::string nomes[3] = { "Joao", "Paula", "Murilo"};
+int idades[3] = {27, 31, 20};
 
- std::cout<<" Ai vai explodir..."<<std::endl;
-
- for(int i = inicio; i >= 0; i--){
-   std::cout<< i <<std::endl;
-   std::this_thread::sleep_for(std::chrono::seconds(1));
- }
-   std::cout<< "aaaahhhh microondas explodindo"<<std::endl;
+std::cout<<nomes[1]<<" tem "<<idades[1]<<" anos! "<<std::endl;
+std::cout<<nomes[2]<<" possui "<<idades[2]<<" anos! "<<std::endl;
+std::cout<<nomes[0]<<" disse que tem "<<idades[0]<<" anos de idade! "<<std::endl;
 
 
     return 0;
