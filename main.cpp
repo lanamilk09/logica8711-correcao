@@ -2,16 +2,16 @@
 
 
 int main(){
-  // for = sei quantas interações 
-  // while = não sei quantas interações 
+ int quantidade; 
+ do{
+ std::cout<<"Digite a quantidade em estoque (Deve ser maior que 0): "<<std::endl;
+ std::cin>>quantidade;
+ }
+while(quantidade <= 0 );
 
-  int contagem = 10; 
-  while(contagem > 0){
-    std::cout<<contagem<<std::endl;
-    contagem--;
-  }
-    std::cout<<" Feliz ano novo!! "<<std::endl;
-    
+std::cout<<"estoque Atualizado: "<<quantidade<<" unidades. "<<std::endl;
+
+
 
 
 
