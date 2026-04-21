@@ -4,11 +4,11 @@
 
 int main(){
 
-std::string carros[5] = {"volvo", "BMW", "Ford", "chevrolet", "Fiat"};
-int tamanho = sizeof(carros) / sizeof(carros[0]);
-std::cout<<tamanho<<std::endl;
-
-
+std::string letras[2][4] ={
+  {"A", "B", "C", "D"},
+  {"E", "F", "G", "H"}
+ };
+std::cout<<letras[1][0]<<std::endl;
 
 
     return 0;
