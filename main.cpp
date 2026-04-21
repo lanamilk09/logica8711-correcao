@@ -1,14 +1,18 @@
 #include <iostream>
-#include<string>
 
 
 int main(){
+  // for = sei quantas interações 
+  // while = não sei quantas interações 
 
-std::string letras[2][4] ={
-  {"A", "B", "C", "D"},
-  {"E", "F", "G", "H"}
- };
-std::cout<<letras[1][0]<<std::endl;
+  int contagem = 10; 
+  while(contagem > 0){
+    std::cout<<contagem<<std::endl;
+    contagem--;
+  }
+    std::cout<<" Feliz ano novo!! "<<std::endl;
+    
+
 
 
     return 0;
