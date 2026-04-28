@@ -1,16 +1,16 @@
 #include <iostream>
-#include <vector>
+
 
 int main(){
 
-std::vector<std::string>cars = {"volvo", "BMW", "Mercedes"};
+int mynumbers [5] = {1, 2, 3, 4, 5};
 
-cars.push_back("Mazda");
-
-for(std::string car : cars){
-    std::cout<<car<<std::endl;
+//for(int i = 0; i < 5; i++){
+   // std::cout<<mynumbers[i]<<std::endl;
+//}
+for(int num : mynumbers){
+    std::cout<<num<<std::endl;
 }
-
 
     return 0;
  }
