@@ -1,13 +1,16 @@
 #include <iostream>
 #include <string>
 
-int myfunction(int x, int y){
+int doublegame (int x){
+return x * 2;
 
-    return x, y;
     
     }
     int main(){
-        std::cout<<myfunction(5, 3)<<std::endl;
+       for(int i = 1; i <= 5; i++){
+        std::cout<< " O dobro de "<<i<<" é "<<doublegame(i)<<std::endl;
+        
+       }
 
 
     return 0;
