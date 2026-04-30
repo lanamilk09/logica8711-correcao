@@ -1,16 +1,31 @@
 #include <iostream>
 #include <string>
 
-int doublegame (int x){
-return x * 2;
+int main(){
+int opcao;
+std::string nome;
+int idade;
 
-    
-    }
-    int main(){
-       for(int i = 1; i <= 5; i++){
-        std::cout<< " O dobro de "<<i<<" é "<<doublegame(i)<<std::endl;
-        
-       }
+
+std::cout<<"---- Escolha a opcao adequada: "<<std::endl;
+std::cout<<"Digite 1 para cadastrar ou 2 para sair: "<<std::endl;
+std::cin>>opcao;
+
+if(opcao == 1){
+   std::cout<<"Digite seu nome: "<<std::endl;
+   std::cin>>nome;
+   std::cout<<"Digite a idade: "<<std::endl;
+   std::cin>>idade;
+
+   std::cout<<"Seu nome é: "<<nome<<std::endl;
+   std::cout<<"Sua idade é: "<<idade<<std::endl;
+
+
+}else{
+   std::cout<<"Até a próxima!"<<std::endl;
+   
+}
+
 
 
     return 0;
