@@ -2,30 +2,25 @@
 #include <string>
 
 int main(){
- int choice;
- float temp, converted; 
+ //br]Amount: valor em reais ExchangeRate: Taxa de Câmbio usdAmount: Valor em dólares
+ double brlAmount, exchangeRate, usdAmount;
 
- std::cout<<"---Temperature Converter---"<<std::endl;
- std::cout<<"1: Celsius to fahrenheit"<<std::endl;
- std::cout<<"2: Fahrenheit to celsius"<<std::endl;
- std::cout<<"Choose an option (1 or 2): "<<std::endl;
- std::cin>>choice;
+int choice;//choice: escolha
 
- if(choice ==1){
-   std::cout<<"Entr temperature in Celsius: "<<std::endl;
-   std::cin>>temp;
-   converted = (temp * 1.8)+32;
-   std::cout<<temp<<"C is "<<converted<<" F. "<<std::endl;
+std::cout<<"--- Currency Converter: BRL to USD---"<<std::endl;
 
- }else if (choice == 2){
-   std::cout<<"Enter temperature in fahrenheit: "<<std::endl;
-   std::cin>>temp;
-   std::cout<<temp<<" F is "<<converted<<" C. "<<std::endl;
+std::cout<<"Enter the current exchange rate (how much is 1 dolar in Reais?): "<<std::endl;
+std::cin>>exchangeRate;
 
- }else{
-   std::cout<<"Invalid Option!Please restart. "<<std::endl;
+std::cout<<"Enterthe amount in BRL(R$):"<<std::endl;
+std::cin>>brlAmount;
 
- }
+if(brlAmount > 0 ){
+   usdAmount = brlAmount / exchangeRate;
+   std::cout<<"You will have $"<<usdAmount<<" US dollars. "<<std::endl;
+
+
+}
 
 
     return 0;
