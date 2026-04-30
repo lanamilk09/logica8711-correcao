@@ -11,7 +11,6 @@ std::cin>>num;
  if( num % 2 == 0){
    std::cout<<"par"<<std::endl;
  }else{ 
-   if( num % 2 <= 1 )
    std::cout<<"impar"<<std::endl;
  }
 
