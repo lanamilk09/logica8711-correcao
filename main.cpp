@@ -4,15 +4,13 @@
 int main(){
  int num;
 
-std::cout<<"Digite um número: "<<std::endl;
-std::cin>>num;
+int totalseconds;
+std::cout<<"Enter total seconds: "<<std::endl;
+std::cin>>totalseconds;
+int minutes = totalseconds /60;
+int seconds = totalseconds %60;
 
- std::cout<<num%2<<std::endl;
- if( num % 2 == 0){
-   std::cout<<"par"<<std::endl;
- }else{ 
-   std::cout<<"impar"<<std::endl;
- }
+std::cout<<"Time: "<<minutes<<" minutes and "<<seconds<<" seconds."<<std::endl;
 
     return 0;
  }
