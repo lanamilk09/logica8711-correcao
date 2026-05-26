@@ -1,22 +1,19 @@
 #include<iostream>
-long long calcularFatorial(int n){
-   long long resultado =1; 
 
-
-   for(int i =1; i <= n; i++ ){
-      resultado *= i;
-   }
-   return resultado; 
+int quadrado(int n){
+   return n * n; 
+}
+int cubo( int n){
+   return n * n * n; 
 }
 int main(){
-   int numero; 
-   std::cout<<"Digite um numero para calcular fatorial: "<<std::endl; 
-   std::cin>>numero; 
+std::cout<<"Quadrado de 5: "<<quadrado(5)<<std::endl;
+std::cout<<"Quadrado de 8: "<<quadrado(8)<<std::endl;
+std::cout<<"Quadrado de 10: "<<quadrado(10)<<std::endl;
 
-   if(numero < 0){
-      std::cout<<"Erro: Fatorial de numero negativo não existe!"<<std::endl; 
-   }else{
-      long long fatorial = calcularFatorial(numero);
-      std::cout<<numero<<"! = "<<fatorial<<std::endl;
-   }
+std::cout<<"cubo de 2: "<<cubo(2)<<std::endl; 
+std::cout<<"cubo de 3: "<<cubo(3)<<std::endl; 
+
+return 0; 
+
 }
