@@ -42,6 +42,19 @@ int main()
     float desconto;
     float descontoConvênio;
 
+    void cadastro(){
+        std::cout<<" Para prosseguirmos, por favor informe os seguintes dados: Nome Completo: "<<std::endl;
+        std::cin>>nomeCompleto;
+        std::cout<<"Informe seu Email: "<<std::endl;
+        std::cin>>email;
+        std::cout<<" Informe seu CPF: "<<std::endl;
+        std::cin>>cpf;
+        std::cout<<"Informe seu RG: "<<std::endl;
+        std::cin>>rg;
+        std::cout<<" Informe sua data de nascimento: "<<std::endl;
+        std::cin>>dataNascimento;    
+    }
+
     escolherModalidade();
     std::cin >> opcao;
 
@@ -123,33 +136,7 @@ int main()
         std::cout << " A opção selecionada é inválida! " << std::endl;
     }
 
-    std::cout << "Digite seu nome completo:" << std::endl;
-    std::getline(std::cin, nomeCompleto);
-    std::cout << nomeCompleto << std::endl;
-    std::cout << " Digite seu cpf:" << std::endl;
-    std::cin >> cpf;
-    std::cout << " Digite seu RG: " << std::endl;
-    std::cin >> rg;
-    std::cout << "Digite sua data de nascimento: " << std::endl;
-    std::cin >> DataNascimento;
-    std::cout << " Digite o seu endereço Completo:" << std::endl;
-    std::cin >> endereço;
-    std::cout << " Digite seu Email para contato:" << std::endl;
-    std::cin >> email;
-    std::cout << "Digite seu CEP:" << std::endl;
-    std::cin >> CEP;
-    std::cout << " Digite seu telefone para contato: " << std::endl;
-    std::cin >> telefone;
 
-    if (DataNascimento <= 2008)
-    {
-        std::cout << "Digite o nome do seu responsável legal : " << std::endl;
-        std::cin >> nomeResponsavel;
-        std::cout << " digite o numero de contato do responsavel: " << std::endl;
-        std::cin >> telefoneResponsavel;
-        std::cout << " Digite o CPF do responsavel: " << std::endl;
-        std::cin >> cpfResponsavel;
-    }
 
     return 0;
 }
