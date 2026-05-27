@@ -1,24 +1,27 @@
 #include<iostream>
-int encontrarMaior(int arr[], int tamanho){
-   int maior = arr[0]; 
 
-   for(int i = 1; i < tamanho; i++){
-      if(arr[i]>maior){
-         maior = arr[i];
+bool ehprimo(int numero){
+   if(numero <= 1){
+         return false; 
       }
+      for(int i = 2; i < numero; i++){
+         if(numero % i == 0){
+            return false; 
+         }
+      }
+      return true; 
    }
-   return maior; 
-}
-   int main(){
-       int numeros [5];
-   
-   std::cout<<"Digite 5 numeros: "<<std::endl; 
-   for(int i = 0; i <= 4; i++){
-       std::cout<<"Digite um numero: "<<(i + 1)<<": ";  
-       std::cin>>numeros[i]; 
-   
-   }
-   std::cout<<"Maior numero: "<<encontrarMaior(numeros, 5)<<std::endl; 
 
-   return 0; 
-}
+   int main(){
+      int numero; 
+      std::cout<<"Digite um numero: "<<std::endl; 
+      std::cin>>numero; 
+      
+
+      if(ehprimo(numero)){
+         std::cout<<numero<<" eh primo! "<<std::endl;
+      }else{
+         std::cout<<"Não é primo! "<<std::endl; 
+      }
+      return 0;
+   }
