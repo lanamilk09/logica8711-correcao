@@ -4,29 +4,23 @@
 
 
 
-bool ehpalindromo(std:: string s){
-  int inicio = 0; 
-  int fim = s.length() - 1; 
-  while (inicio < fim){
-    if(s[inicio] != s[fim]){
-      return false; 
-    }
-    inicio++; 
-    fim--; 
-  }
+bool ehpalindromo(std:: string s, int inicio, int fim){
+ if(inicio >= fim){
   return true; 
-
-}
+ } if(s[inicio] != s[fim]){
+  return false; 
+ }
+ return ehpalindromo(s, inicio + 1, fim - 1); }
 int main(){
 
   std::string palavra ; 
   std::cout<<"Digite uma palavra: "<<std::endl; 
   std::cin>>palavra; 
 
-  for(int i = 0; i < palavra.length(); i++){
-    palavra[i] = std::tolower(palavra[i]);
+  for(char  &c : palavra){
+    c = std::tolower(c);
   } 
-  if(ehpalindromo(palavra)){
+  if(ehpalindromo(palavra, 0, palavra.length() -1)){
     std::cout<<" é palindromo! "<<std::endl; 
   }else{
     std::cout<<" Não é palindromo! "<<std::endl; 
