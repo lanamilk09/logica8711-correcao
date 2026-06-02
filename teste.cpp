@@ -1,31 +1,15 @@
 #include<iostream>
-#include<string>
-#include<cctype>
 
-
-
-bool ehpalindromo(std:: string s, int inicio, int fim){
- if(inicio >= fim){
-  return true; 
- } if(s[inicio] != s[fim]){
-  return false; 
- }
- return ehpalindromo(s, inicio + 1, fim - 1); }
 int main(){
+  int numero = 42;
+  int numero1 = 1;  
 
-  std::string palavra ; 
-  std::cout<<"Digite uma palavra: "<<std::endl; 
-  std::cin>>palavra; 
+  std::cout<<"numero: "<<numero<<std::endl; 
+  std::cout<<"Endereços: "<<&numero<<std::endl; 
+  std::cout<<"numero: "<<numero1<<std::endl; 
+  std::cout<<" Endereços: "<<&numero1<<std::endl; 
+  
 
-  for(char  &c : palavra){
-    c = std::tolower(c);
-  } 
-  if(ehpalindromo(palavra, 0, palavra.length() -1)){
-    std::cout<<" é palindromo! "<<std::endl; 
-  }else{
-    std::cout<<" Não é palindromo! "<<std::endl; 
-  }
   return 0; 
 }
- 
 
