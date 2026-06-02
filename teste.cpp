@@ -2,13 +2,11 @@
 
 int main(){
   int numero = 42;
-  int numero1 = 1;  
+  int* ptr = &numero; 
 
-  std::cout<<"numero: "<<numero<<std::endl; 
-  std::cout<<"Endereços: "<<&numero<<std::endl; 
-  std::cout<<"numero: "<<numero1<<std::endl; 
-  std::cout<<" Endereços: "<<&numero1<<std::endl; 
-  
+  std::cout<<" Acessar via variavel: "<<numero<<std::endl; 
+  std::cout<<"acessar via ponteiro: "<<*ptr<<std::endl; 
+
 
   return 0; 
 }
