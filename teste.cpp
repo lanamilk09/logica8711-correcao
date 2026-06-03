@@ -3,19 +3,22 @@
 
 struct aluno{
   std::string nome; 
-  float nota1; 
-  float nota2; 
+  float nota; 
+ 
 
 }; 
-float calcularmedia(aluno a){
-  return(a.nota1 + a.nota2) / 2; 
 
-}
 
 int main(){
 
-  aluno aluno = {"Paulo", 8.0, 9.5}; 
-  float media = calcularmedia(aluno);
+  aluno alunos[3]={
+    {"henrique", 8.5},
+    {"Paula", 9.6},
+    {"Juliana", 7.0}
+  }; 
+ for(int i = 0; i < 3; i++ ){
+  std::cout<<alunos[i].nome<<" : "<<alunos[i].nota<<std::endl; 
+ }
 
-  std::cout<<aluno.nome<<" - media: "<<media<<std::endl; 
+return 0; 
 }
