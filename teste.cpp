@@ -1,16 +1,63 @@
 #include<iostream>
+#include<string>
 
-int encontrarMaior(int* arr, int tamanho){
-  int maior = arr[0];
-  for(int i = 1; i < tamanho; i++){
-    if(arr[i]>maior){
-      maior = arr[i];
+int main(){
+  std::string palavra = "programação ";
+  std::string adivinhada = " "; 
+
+  int erros = 0; 
+  int maxErros = 6; 
+  int ganhou = false; 
+
+  for(int i = 0; i<palavra.length(); i++){
+    adivinhada += '_';
+
+  }
+  std::cout<<"====== Jogo da forca ======"<<std::endl; 
+  std::cout<<"Adivinhe a palavra! "<<std::endl; 
+  std::cout<<std::endl;
+  while(erros < maxErros && ! ganhou){
+    std::cout<<"palavra: ";
+    for(int i = 0; i<adivinhada.length(); i++){
+      std::cout<<adivinhada[i]<<" "; 
+    }
+    std::cout<<std::endl; 
+    std::cout<<"Erros: "<<erros<<"/"<<maxErros<<std::endl; 
+    std::cout<<std::endl;
+
+  char letra; 
+  std::cout<<"Digite uma letra: "; 
+  std::cin>>letra; 
+  letra = std::tolower(letra); 
+  std::cout<<std::endl; 
+  bool encontrou = false; 
+  for(int i = 0; i < palavra.length(); i++){
+    if(palavra[i] == letra){
+      adivinhada[i] = letra; 
+      encontrou = true; 
     }
   }
-  return maior; 
+  if(encontrou){
+    std::cout<<"Letra errada! "<<std::endl; 
+    erros++; 
+
+  }else{
+    std::cout<<"Letra encontrada!"<<std::endl; 
+
+  }
+  std::cout<<std::endl; 
+  if(adivinhada == palavra){
+    ganhou = true; 
+
+  }
 }
-int main(){
-  int arr[] = {3,7,2,9,1,5};
-  std::cout<<"maior elemento: "<<encontrarMaior(arr, 6)<<std::endl; 
-  return 0; 
+std::cout<<"=========="<<std::endl; 
+if(ganhou){
+  std::cout<<"Parabens acertou! "<<std::endl; 
+  std::cout<<"a palavra era: "<<palavra<<std::endl; 
+}else{
+  std::cout<<"Game Over! Você perdeu! "<<std::endl; 
+  std::cout<<"A palavra era: "<<palavra<<std::endl; 
+  
+}
 }
