@@ -1,63 +1,46 @@
 #include<iostream>
 #include<string>
 
-int main(){
-  std::string palavra = "programação ";
-  std::string adivinhada = " "; 
+struct jogador{
+  std::string nome; 
+  std::string time; 
+  int gols;
+};
 
-  int erros = 0; 
-  int maxErros = 6; 
-  int ganhou = false; 
+int main (){
+  jogador jogadores[5]; 
 
-  for(int i = 0; i<palavra.length(); i++){
-    adivinhada += '_';
-
-  }
-  std::cout<<"====== Jogo da forca ======"<<std::endl; 
-  std::cout<<"Adivinhe a palavra! "<<std::endl; 
+  std::cout<<" ====== COPA - Ranking de goleadores ====== "<<std::endl; 
   std::cout<<std::endl;
-  while(erros < maxErros && ! ganhou){
-    std::cout<<"palavra: ";
-    for(int i = 0; i<adivinhada.length(); i++){
-      std::cout<<adivinhada[i]<<" "; 
-    }
+
+  for(int i = 0; i < 5; i++){
+    std::cout<<"jogador "<<(i + 1 )<<":"<<std::endl; 
+    std::cout<<"nome: "; 
+    std::cin>>jogadores[i].nome;
+    std::cout<<"time: ";
+    std::cin>>jogadores[i].time;
+    std::cout<<"Gols: ";
+    std::cin>>jogadores[i].gols;
     std::cout<<std::endl; 
-    std::cout<<"Erros: "<<erros<<"/"<<maxErros<<std::endl; 
-    std::cout<<std::endl;
-
-  char letra; 
-  std::cout<<"Digite uma letra: "; 
-  std::cin>>letra; 
-  letra = std::tolower(letra); 
+  }
+  std::cout<<" ====== RAnking ======"<<std::endl; 
   std::cout<<std::endl; 
-  bool encontrou = false; 
-  for(int i = 0; i < palavra.length(); i++){
-    if(palavra[i] == letra){
-      adivinhada[i] = letra; 
-      encontrou = true; 
+
+  for(int i = 0; i < 5 - 1; i++){
+    for(int j = 0; j < 5 - 1; j++){
+      if(jogadores[i].gols < jogadores[j+1].gols){
+        jogador temp = jogadores[j];
+        jogadores[j] = jogadores[j + 1]; 
+        jogadores[ j + 1] = temp; 
+      }
     }
   }
-  if(encontrou){
-    std::cout<<"Letra errada! "<<std::endl; 
-    erros++; 
 
-  }else{
-    std::cout<<"Letra encontrada!"<<std::endl; 
+for(int i = 0; i < 5; i++){
+  std::cout<<( i + 1)<<"--"<<jogadores[i].nome
+           <<"("<<jogadores[i].time<<")-"
+           <<jogadores[i].gols<<"gols"<<std::endl; 
 
-  }
-  std::cout<<std::endl; 
-  if(adivinhada == palavra){
-    ganhou = true; 
-
-  }
 }
-std::cout<<"=========="<<std::endl; 
-if(ganhou){
-  std::cout<<"Parabens acertou! "<<std::endl; 
-  std::cout<<"a palavra era: "<<palavra<<std::endl; 
-}else{
-  std::cout<<"Game Over! Você perdeu! "<<std::endl; 
-  std::cout<<"A palavra era: "<<palavra<<std::endl; 
-  
-}
+return 0; 
 }
