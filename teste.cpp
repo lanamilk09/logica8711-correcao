@@ -1,39 +1,35 @@
 #include<iostream>
 #include<string>
-struct Jogador{
-  std::string nome; 
-  int cartaoAmarelo; 
-  int cartaoVermelho; 
-}; 
 
-int main(){
-  std::cout<<"==== REGISTRO DE CARTOES ========"<<std::endl; 
-  std::cout<<std::endl; 
 
-  Jogador jogador; 
+struct Convocados{
+  std::string nome, posição; 
+  int numero; 
+  
+};
+int  main(){
 
-  std::cout<<"nome jogador: ";
-  std::cin>>jogador.nome; 
+Convocados convocados[3];
 
-  std::cout<<"CArtoes amarelos: "<<std::endl; 
-  std::cin>>jogador.cartaoAmarelo; 
+std::cout<<"===== Convocação da seleção ======"<<std::endl;
+std::cout<<std::endl; 
 
-  std::cout<<" Cartoes vermelhos: "; 
-  std::cin>>jogador.cartaoVermelho; 
 
-  std::cout<<std::endl; 
-  std::cout<<"==== Situação ====="<<std::endl;
- 
- if(jogador.cartaoVermelho > 0){
-  std::cout<<jogador.nome<<"foi expulso!"<<std::endl; 
+for(int i = 0; i < 3; i++){
+  std::cout<<"Jogador"<<(i + 1)<<" : "<<std::endl;
+  std::cout<<"nome: ";
+  std::cin>>convocados[i].nome; 
+  std::cout<<"Numero: ";
+  std::cin>>convocados[i].numero;
+  std::cout<<" posição: ";
+  std::cin>>convocados[i].posição;
 
- }else if(jogador.cartaoAmarelo >= 2){
-  std::cout<<jogador.nome<<"Recebeu 2 amarelos e foi expulso! "<<std::endl; 
- }else if(jogador.cartaoAmarelo == 1){
-  std::cout<<jogador.nome<<"Recebeu 1 cartão amarelo. Cuidado!"<<std::endl; 
- }else{
-  std::cout<<jogador.nome<<"está limpo!"<<std::endl; 
- }
+} 
+std::cout<<"=====lista de convocados ====="<<std::endl;
+std::cout<<std::endl; 
 
-return 0; 
+for(int i = 0; i < 3; i++){
+  std::cout<<convocados[i].numero<<" - "<<convocados[i].nome<<"("<<convocados[i].posição<<")"<<std::endl; 
+
+}
 }
