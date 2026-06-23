@@ -1,33 +1,63 @@
 #include<iostream>
 
 int main(){
-  int fila[5];
+  int fila[10];
   int inicio = 0; 
   int fim = 0; 
+  int topo = -1; 
+  int opcao; 
+  std::cout<<"==== Fila com Menu ======"<<std::endl; 
+  while(true){
+    std::cout<<std::endl; 
+    std::cout<<"1.Empilhar"<<std::endl; 
+    std::cout<<"2.Desempilhar"<<std::endl; 
+    std::cout<<"3. Exibir pilha"<<std::endl; 
+    std::cout<<"Sair"<<std::endl; 
 
-  std::cout<<"===== FILA ======"<<std::endl; 
-  std::cout<<std::endl; 
+    std::cout<<"Escolha: "<<std::endl; 
+    std::cin>>opcao; 
 
-  fila[0] = 100; 
-  fila[1] = 200; 
-  fila[2] = 300; 
-  fim = 3; 
 
-  std::cout<<"Elementos enfileirados: 100,200,300"<<std::endl; 
-  std::cout<<std::endl; 
+    if(opcao ==1){
+      if(fim < 10){
+        int valor; 
+        std::cout<<"Digite o valor: ";
+        std::cin>>valor; 
+        fila[fim] = valor; 
+        fim++; 
+        std::cout<<"Enfileirado!"<<std::endl;
+
+      }else{
+        std::cout<<"Fila Cheia!! "<<std::endl; 
+
+      }
+    }else if (opcao == 2){
+      if(inicio < fim){
+        std::cout<<"Removido: "<<std::endl; 
+        inicio++; 
+      }else{
+        std::cout<<"Fila VAzia! "<<std::endl; 
+      }
+
+    } else if(opcao == 3){
+      if(inicio < fim){
+        std::cout<<"Fila: ";
+        for(int i = inicio; i < fim; i++){
+          std::cout<<fila[i]<<" "; 
+
+        }
+        std::cout<<std::endl; 
+      }else{
+        std::cout<<"Fila Vazia! "<<std::endl; 
+      }
+    }
+    else if(opcao == 4){
+      std::cout<<"Saindo..."<<std::endl; 
+      break;
+    }
+}
   
-
-  std::cout<<"Desinfileirando..."<<std::endl; 
-  while(inicio < fim){
-    std::cout<<"Removido: "<<fila[inicio]<<std::endl; 
-    inicio++;
-
+  return 0; 
   }
 
-
-
-
-
  
-return 0; 
-}
