@@ -1,35 +1,29 @@
 #include<iostream>
-#include<string>
+
+int main(){
+  int pilha[5];
+  int topo = -1; 
+  int tamanho = 5; 
+
+  std::cout<<"===== PILHA ======"<<std::endl; 
+  std::cout<<std::endl; 
+
+  pilha[0] = 10;
+  pilha[1] = 20; 
+  pilha[2] = 30;
+  topo = 2; 
+
+  std::cout<<"elementos empilhados: 10, 20, 30"<<std::endl; 
+  std::cout<<std::endl; 
+
+  std::cout<<"Desempilhando..."<<std::endl; 
+  while(topo >= 0){
+    std::cout<<"Removida: "<<pilha[topo]<<std::endl;
+    topo--; 
 
 
-struct Convocados{
-  std::string nome, posição; 
-  int numero; 
+  }
   
-};
-int  main(){
+ return 0; 
 
-Convocados convocados[3];
-
-std::cout<<"===== Convocação da seleção ======"<<std::endl;
-std::cout<<std::endl; 
-
-
-for(int i = 0; i < 3; i++){
-  std::cout<<"Jogador"<<(i + 1)<<" : "<<std::endl;
-  std::cout<<"nome: ";
-  std::cin>>convocados[i].nome; 
-  std::cout<<"Numero: ";
-  std::cin>>convocados[i].numero;
-  std::cout<<" posição: ";
-  std::cin>>convocados[i].posição;
-
-} 
-std::cout<<"=====lista de convocados ====="<<std::endl;
-std::cout<<std::endl; 
-
-for(int i = 0; i < 3; i++){
-  std::cout<<convocados[i].numero<<" - "<<convocados[i].nome<<"("<<convocados[i].posição<<")"<<std::endl; 
-
-}
 }
