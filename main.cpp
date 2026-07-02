@@ -140,3 +140,60 @@ int main()
 
     return 0;
 }
+
+
+
+
+#include<iostream> 
+int main(){
+  int numeros[5] = {10,20,30,40,50};
+  std::cout<<"Definir Valores predefinidos"<<std::endl; 
+  std::cout<<" numeros armazenados: "<<std::endl; 
+  for(int i = 0; i < 5; i++){
+    std::cout<<numeros[i]<<" ";
+
+  }
+  std::cout<<std::endl; 
+  return 0; 
+}
+
+
+#include<iostream> 
+int main(){
+  int numeros[5];
+  int soma = 0; 
+
+  std::cout<<"---- Soma simples ----"<<std::endl; 
+
+  for(int i = 0; i < 5; i++){
+    std::cout<<"Digite o numero"<<(i + 1)<<": ";
+
+    std::cin>>numeros[i];
+    soma += numeros[i];
+  }
+  std::cout<<std::endl; 
+  std::cout<<"Soma Total: "<<soma<<std::endl; 
+  return 0; 
+}
+
+#include<iostream> 
+int main(){
+  int numeros[5];
+  int maior = 0; 
+
+  std::cout<<"---- Soma simples ----"<<std::endl; 
+
+  for(int i = 0; i < 5; i++){
+    std::cout<<"Digite o numero"<<(i + 1)<<": ";
+
+    std::cin>>numeros[i];
+    
+  }
+  maior = numeros[0];
+  for(int i = 0; i<5; i++){
+    if(numeros[i] > maior){
+      maior = numeros[i];
+    }
+  }
+
+}

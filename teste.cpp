@@ -1,50 +1,32 @@
-#include<iostream>
+#include<iostream> 
+#include<vector> 
+
 
 int main(){
- int matriz[3][4] = {
-  {10,25,5,40},
-  {15,8,30,12},
-  {20,3,18,35}
+    std::vector<int>numeros; 
 
- };
+    std::cout<<"--- VECTOR (arraylist em C++) ---"<<std::endl; 
 
- int maior = matriz[0][0];
- int menor = matriz[0][0];
- int linhaM = 0, colunaM = 0;
- int linhaN = 0, colunaN = 0; 
+    numeros.push_back(10);
+    numeros.push_back(20);
+    numeros.push_back(30);
 
- std::cout<<" ====== min e max em Matriz ====="<<std::endl; 
+    std::cout<<"Numeros: ";
+    for(int i = 0; i < numeros.size(); i++){
+        std::cout<<numeros[i]<<" ";
+    }
+    std::cout<<std::endl; 
 
- std::cout<<"Matriz: "<<std::endl; 
- for(int i = 0; i < 3; i++){
-  for(int j = 0; j<4; j++){
-    std::cout<<matriz[i][j]<<" ";
+    std::cout<<"Tamanho: "<<numeros.size()<<std::endl; 
+    numeros.pop_back(); 
+    
 
-    if(matriz [i][j] < maior){
-      maior = matriz[i][j]; 
-      linhaM = i; 
-      colunaM = j;
-
+    std::cout<<"Apó remover o ultimo: "; 
+    for(int i = 0; i < numeros.size(); i++){
+        std::cout<<numeros[i]<<" ";
 
     }
-    if(matriz [i][j] < menor ){
-      menor = matriz[i][j];
-      linhaN = i; 
-      colunaN = j; 
 
-    }
-  }
- }
- std::cout<<std::endl;
-    std::cout<<"Maior: "<<maior<<" na posicao ["<<linhaM<<"]["<<colunaM<<"]"<<std::endl;
-    std::cout<<"Menor: "<<menor<<" na posicao ["<<linhaN<<"]["<<colunaN<<"]"<<std::endl;
-
-    return 0;
+return 0; 
 }
 
-
-  
-  
-  
-
- 
