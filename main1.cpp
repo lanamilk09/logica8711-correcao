@@ -21,7 +21,7 @@ int main(){
      int maior = numeros[0];
      int menor = numeros[0]; 
 
-     for(int i = 0; i < numeros.size(); i++){
+     for(int i = 0; i = numeros.size(); i++){
         if(numeros[i] > maior){
             maior = numeros[i];
         }
@@ -32,8 +32,7 @@ int main(){
      std::cout<<"Maior: "<<maior<<std::endl; 
      std::cout<<"Menor: "<<menor<<std::endl; 
 
-    // std::cout<<"fazendo um teste!!";
-
+    std::cout<<"Fazendo um teste com o software!!";
    
 return 0; 
 }
