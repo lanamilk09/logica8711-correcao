@@ -4,26 +4,29 @@
 
 int main(){
     std::vector<int>numeros; 
-    std::cout<<"Soma Total: "<<std::endl; 
+    std::cout<<"Contar Ocorrências"<<std::endl; 
    
 
     
+    numeros.push_back(5);
     numeros.push_back(10);
-    numeros.push_back(20);
-    numeros.push_back(30);
-    numeros.push_back(40);
-    numeros.push_back(50);
+    numeros.push_back(5);
+    numeros.push_back(15);
+    numeros.push_back(15);
+    numeros.push_back(5);
+    numeros.push_back(15);
 
     std::cout<<"Vector: ";
     for(int i = 0; i < numeros.size(); i++){
         std::cout<<numeros[i]<<" ";
     }
-    int soma = 0; 
+    int contador = 0; 
     for(int i = 0; i < numeros.size(); i++){
-        soma += numeros[i];
-
+       if(numeros[i] == 5){
+        contador ++;
+       }
     }
-    std::cout<<"\nSoma: "<<soma<<std::endl;
+    std::cout<<"O numero 5 aparece:  "<<contador<<" Vezes! "<<std::endl;
 
 
    
