@@ -3,33 +3,20 @@
 
 
 int main(){
-    std::vector<int>numeros; 
-    std::cout<<"Contar Ocorrências"<<std::endl; 
-   
+    std::vector<int> numeros; 
+    int quantidade; 
+    std::cout<<"Adicionar do Usuario "<<std::endl; 
 
-    
-    numeros.push_back(5);
-    numeros.push_back(10);
-    numeros.push_back(5);
-    numeros.push_back(15);
-    numeros.push_back(15);
-    numeros.push_back(5);
-    numeros.push_back(15);
+    std::cout<<"Quantos números? "<<std::endl; 
+    std::cin>>quantidade; 
 
-    std::cout<<"Vector: ";
-    for(int i = 0; i < numeros.size(); i++){
-        std::cout<<numeros[i]<<" ";
+    for(int i = 0; i < quantidade; i++){
+        int numero; 
+        std::cout<<"Digite um numero: "<<(i + 1)<<": ";
+        std::cin>>numero; 
+
+        numeros.push_back(numero);
     }
-    int contador = 0; 
-    for(int i = 0; i < numeros.size(); i++){
-       if(numeros[i] == 5){
-        contador ++;
-       }
-    }
-    std::cout<<"O numero 5 aparece:  "<<contador<<" Vezes! "<<std::endl;
-
-
-   
 return 0; 
 }
 
