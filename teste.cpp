@@ -1,37 +1,35 @@
-#include<iostream> 
-#include<vector> 
+#include<iostream>  
 
+ 
 
-int main(){
-    
-    std::vector<int> numeros; 
+int main(){  
 
-    
+    int nota; 
 
+ 
 
-    numeros.push_back(10); 
-    numeros.push_back(20); 
-    numeros.push_back(30); 
-    numeros.push_back(40); 
-    numeros.push_back(50); 
+    while (true){ 
 
-    std::cout<<"Original: "; 
-    for(int i = 0; i < numeros.size(); i++){
-        std::cout<<numeros[i]<<std::endl; 
-    }
+        std::cout<<"Digite um numero de 0 a 10: "<<std::endl; 
 
-    std::cout<<std::endl; 
-    std::cout<<"Invertido: "; 
-    for(int i = numeros.size() -1; i >= 0; i--){
-        std::cout<<numeros[i]<<" "; 
+        std::cin>>nota; 
 
-    }
-    std::cout<<std::endl; 
+        if(nota >= 0 && nota <=10) 
 
-    
-    
+        std::cout<<"Nota: "<< nota <<" Registrada "<<std::endl; 
 
-   
+        else{ 
+
+            std::cout<<"Nota não registrada"<<std::endl; 
+
+        } 
+
+ 
+
 return 0; 
-}
 
+    } 
+
+     
+
+} 
