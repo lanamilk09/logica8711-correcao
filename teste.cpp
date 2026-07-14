@@ -1,35 +1,18 @@
 #include<iostream>  
+#include<cmath>
 
- 
 
-int main(){  
+int calcularCubo(int num){
+    return static_cast<int>(std::pow(num,3)); 
 
-    int nota; 
-
- 
-
-    while (true){ 
-
-        std::cout<<"Digite um numero de 0 a 10: "<<std::endl; 
-
-        std::cin>>nota; 
-
-        if(nota >= 0 && nota <=10) 
-
-        std::cout<<"Nota: "<< nota <<" Registrada "<<std::endl; 
-
-        else{ 
-
-            std::cout<<"Nota não registrada"<<std::endl; 
-
-        } 
-
- 
-
-return 0; 
-
-    } 
-
+}
+int main(){
+    int a; 
+    std::cout<<"Digite um número inteiro: ";
+    std::cin>>a; 
+    int cubo = calcularCubo(a); 
+    std::cout<<" O cubo de "<<a<<" é: "<<cubo<<std::endl; 
+ return 0; 
+}
      
 
-} 
